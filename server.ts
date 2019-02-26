@@ -13,6 +13,10 @@ app.prepare().then(() => {
     return app.render(req, res, '/', { category: req.params.category });
   });
 
+  server.get('/search/:query', (req, res) => {
+    return app.render(req, res, '/search', { q: req.params.query });
+  });
+
   server.get('*', (req, res) => {
     return handle(req, res);
   });

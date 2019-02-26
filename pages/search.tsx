@@ -78,7 +78,7 @@ class Index extends Component<IProps, IState> {
     const { text } = this.state;
 
     event.preventDefault();
-    Router.push({ pathname: '/search', query: { q: text } });
+    Router.push(`/search?q=${text}`, `/search/${text}`);
   }
 
   private handleInput = (event: FormEvent<HTMLInputElement>) => {
