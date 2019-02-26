@@ -1,5 +1,5 @@
 # News Next.js
-A News feed app created with Next.js  
+A News feed app created with Next.js and Redux
 Using api from https://newsapi.org
 ### [Live Demo](https://news-nextjs.now.sh)
 
