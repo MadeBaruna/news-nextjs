@@ -50,7 +50,7 @@ const Header: StatelessComponent<WithRouterProps> = ({ router }) => (
       <Link href="/">
         <Logo>News Feed</Logo>
       </Link>
-      <Link href="/search">
+      <Link prefetch href="/search">
         <SearchIcon data-test="search-button" src="/static/magnify.svg" />
       </Link>
     </HeaderWrapper>
