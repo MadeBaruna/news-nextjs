@@ -23,6 +23,8 @@
     "**/*.spec.tsx",
     "**/*.test.ts",
     "**/*.test.tsx",
-    "next.config.js"
+    "next.config.js",
+    "jest.setup.js",
+    "jest.config.js"
   ]
 }

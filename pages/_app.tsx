@@ -4,6 +4,7 @@ import App, { Container, NextAppContext } from 'next/app';
 import withRedux from 'next-redux-wrapper';
 
 import { initStore } from '../src/store';
+import Layout from '../components/Layout';
 
 class NewsApp extends App<{ store: any }> {
   public static async getInitialProps({ Component, ctx }: NextAppContext) {
@@ -22,7 +23,9 @@ class NewsApp extends App<{ store: any }> {
     return (
       <Container>
         <Provider store={store}>
-          <Component {...pageProps} />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
         </Provider>
       </Container>
     );

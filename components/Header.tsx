@@ -44,8 +44,9 @@ const Header: StatelessComponent = () => (
       </Link>
     </HeaderWrapper>
     <CategoryWrapper>
-      <CategoryItem name="Entertaiment" category="entertaiment" />
       <CategoryItem name="General" category="general" />
+      <CategoryItem name="Bussiness" category="business" />
+      <CategoryItem name="Entertaiment" category="entertainment" />
       <CategoryItem name="Health" category="health" />
       <CategoryItem name="Science" category="science" />
       <CategoryItem name="Sports" category="sports" />

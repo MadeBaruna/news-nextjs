@@ -9,6 +9,14 @@ const Item = styled.span<{ active: boolean }>`
   padding: 0 8px;
   user-select: none;
   color: ${({ active }) => (active ? 'red' : 'black')};
+
+  &:hover {
+    color: red;
+  }
+
+  &:active {
+    color: red;
+  }
 `;
 
 interface IProps extends WithRouterProps {
@@ -22,7 +30,14 @@ const CategoryItem: StatelessComponent<IProps> = ({
   category,
 }) => (
   <Link href={`/?category=${category}`} as={`/category/${category}`}>
-    <Item active={router.query.category === category}>{name}</Item>
+    <Item
+      active={
+        (category === 'general' && router.query.category === undefined) ||
+        router.query.category === category
+      }
+    >
+      {name}
+    </Item>
   </Link>
 );
 
