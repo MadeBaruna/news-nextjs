@@ -37,7 +37,16 @@ class AppDocument extends Document {
       <html>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <style>{`html, body { margin: 0; padding: 0; background-color: #fefefe; }`}</style>
+          <style>{`html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #fefefe;
+            font-family: 'Open Sans', sans-serif;
+          }`}</style>
+          <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
