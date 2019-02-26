@@ -3,7 +3,7 @@ import axios from 'axios';
 const api = axios.create({
   baseURL: 'https://newsapi.org/v2',
   params: {
-    apiKey: '0de22080bec64af480ffb07903de4441',
+    apiKey: '9c3b1bba432e49e6b58bae43f9127fa4',
   },
 });
 
