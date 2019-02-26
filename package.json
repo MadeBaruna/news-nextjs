@@ -1,0 +1,33 @@
+{
+  "name": "news-nextjs",
+  "version": "1.0.0",
+  "description": "A news feed app created with next.js",
+  "main": "index.js",
+  "author": "Made Baruna",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "next": "^8.0.3",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "styled-components": "^4.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@types/jest": "^24.0.8",
+    "@types/next": "^8.0.1",
+    "@types/react": "^16.8.5",
+    "@types/react-dom": "^16.8.2",
+    "@zeit/next-typescript": "^1.1.1",
+    "babel-jest": "^24.1.0",
+    "babel-plugin-styled-components": "^1.10.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "jest": "^24.1.0",
+    "tslint": "^5.13.0",
+    "typescript": "^3.3.3333"
+  },
+  "scripts": {
+    "dev": "next"
+  }
+}
