@@ -90,6 +90,8 @@ class Index extends Component<IProps, IState> {
 
   private async getArticles() {
     const { page, query } = this.props;
+    if (!query) { return; }
+
     NProgress.start();
     await this.props.getArticles('search', page + 1, null, query);
     NProgress.done();
