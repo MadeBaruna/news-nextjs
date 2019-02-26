@@ -42,6 +42,7 @@
   "scripts": {
     "test": "jest",
     "cypress": "cypress open",
+    "e2e": "cypress run",
     "dev": "ts-node --project tsconfig.server.json server.ts",
     "build": "next build",
     "start": "next start"
