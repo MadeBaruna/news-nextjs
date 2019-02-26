@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { StatelessComponent } from 'react';
 import Link from 'next/link';
 import CategoryItem from './CategoryItem';
+import { withRouter, WithRouterProps } from 'next/router';
 
 const Wrapper = styled.div`
   display: flex;
@@ -18,6 +19,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const Logo = styled.span`
+  flex: 1;
   font-family: "Raleway", sans-serif;
   cursor: pointer;
   font-size: 24px;
@@ -36,23 +38,34 @@ const CategoryWrapper = styled.div`
   cursor: pointer;
 `;
 
-const Header: StatelessComponent = () => (
+const SearchIcon = styled.img`
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+`;
+
+const Header: StatelessComponent<WithRouterProps> = ({ router }) => (
   <Wrapper>
     <HeaderWrapper>
       <Link href="/">
         <Logo>News Feed</Logo>
       </Link>
+      <Link href="/search">
+        <SearchIcon src="/static/magnify.svg" />
+      </Link>
     </HeaderWrapper>
-    <CategoryWrapper>
-      <CategoryItem name="General" category="general" />
-      <CategoryItem name="Bussiness" category="business" />
-      <CategoryItem name="Entertaiment" category="entertainment" />
-      <CategoryItem name="Health" category="health" />
-      <CategoryItem name="Science" category="science" />
-      <CategoryItem name="Sports" category="sports" />
-      <CategoryItem name="Technology" category="technology" />
-    </CategoryWrapper>
+    {router.pathname === '/' && (
+      <CategoryWrapper>
+        <CategoryItem name="General" category="general" />
+        <CategoryItem name="Bussiness" category="business" />
+        <CategoryItem name="Entertaiment" category="entertainment" />
+        <CategoryItem name="Health" category="health" />
+        <CategoryItem name="Science" category="science" />
+        <CategoryItem name="Sports" category="sports" />
+        <CategoryItem name="Technology" category="technology" />
+      </CategoryWrapper>
+    )}
   </Wrapper>
 );
 
-export default Header;
+export default withRouter(Header);

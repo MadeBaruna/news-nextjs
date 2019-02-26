@@ -14,7 +14,7 @@ interface Article {
   content: string;
 }
 
-interface HeadlineResponse {
+interface ArticlesResponse {
   status: 'ok' | 'error';
   totalResults: number;
   articles: Article[];

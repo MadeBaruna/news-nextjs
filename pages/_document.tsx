@@ -47,6 +47,7 @@ class AppDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway"
             rel="stylesheet"
           />
+          <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
         </Head>
         <body>
           <Main />

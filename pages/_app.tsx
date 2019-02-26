@@ -2,9 +2,18 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import App, { Container, NextAppContext } from 'next/app';
 import withRedux from 'next-redux-wrapper';
+import Router from 'next/router';
+import NProgress from 'nprogress';
 
 import { initStore } from '../src/store';
 import Layout from '../components/Layout';
+
+NProgress.configure({ showSpinner: false });
+Router.events.on('routeChangeStart', () => {
+  NProgress.start();
+});
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
 
 class NewsApp extends App<{ store: any }> {
   public static async getInitialProps({ Component, ctx }: NextAppContext) {
