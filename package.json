@@ -29,6 +29,7 @@
     "@zeit/next-typescript": "^1.1.1",
     "babel-jest": "^24.1.0",
     "babel-plugin-styled-components": "^1.10.0",
+    "cypress": "^3.1.5",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "express": "^4.16.4",
@@ -40,6 +41,7 @@
   },
   "scripts": {
     "test": "jest",
+    "cypress": "cypress open",
     "dev": "ts-node --project tsconfig.server.json server.ts",
     "build": "next build",
     "start": "next start"

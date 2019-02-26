@@ -51,7 +51,7 @@ const Header: StatelessComponent<WithRouterProps> = ({ router }) => (
         <Logo>News Feed</Logo>
       </Link>
       <Link href="/search">
-        <SearchIcon src="/static/magnify.svg" />
+        <SearchIcon data-test="search-button" src="/static/magnify.svg" />
       </Link>
     </HeaderWrapper>
     {router.pathname === '/' && (

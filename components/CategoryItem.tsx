@@ -31,6 +31,7 @@ const CategoryItem: StatelessComponent<IProps> = ({
 }) => (
   <Link href={`/?category=${category}`} as={`/category/${category}`}>
     <Item
+      data-test="category-item"
       active={
         (category === 'general' && router.query.category === undefined) ||
         router.query.category === category

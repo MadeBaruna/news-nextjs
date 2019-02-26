@@ -33,7 +33,9 @@ interface IState {
 
 class Index extends Component<IProps, IState> {
   public static async getInitialProps({ store, query }) {
-    await store.dispatch(getArticles('search', 1, null, query.q));
+    if (query.q) {
+      await store.dispatch(getArticles('search', 1, null, query.q));
+    }
 
     return { query: query.q };
   }
@@ -60,6 +62,7 @@ class Index extends Component<IProps, IState> {
       <>
         <form onSubmit={this.search}>
           <SearchInput
+            data-test="search-input"
             value={text}
             onChange={this.handleInput}
             placeholder="Type and press enter to search"

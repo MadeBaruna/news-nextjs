@@ -1,0 +1,10 @@
+{
+  "name": "news-nextjs",
+  "version": 2,
+  "alias": "news-nextjs",
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "routes": [
+    { "src": "/category/$", "dest": "/?category=$" },
+    { "src": "/search/$", "dest": "/search?q=$" }
+  ]
+}

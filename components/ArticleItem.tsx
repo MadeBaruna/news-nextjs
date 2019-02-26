@@ -69,7 +69,7 @@ const Link = styled.a`
 
 const ArticleItem: StatelessComponent<IProps> = ({ article }) => (
   <Link target="__blank" href={article.url}>
-    <Wrapper>
+    <Wrapper data-test="article-item">
       <TextWrapper>
         <Title>{article.title}</Title>
         <Description>{article.description}</Description>

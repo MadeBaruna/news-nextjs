@@ -23,7 +23,6 @@ export const getArticles = (
   }
 
   dispatch(setFetchingArticles(true));
-  console.log('current Page', page);
   try {
     const endpoint = type === 'search' ? 'everything' : 'top-headlines';
 
